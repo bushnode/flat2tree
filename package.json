@@ -1,0 +1,26 @@
+{
+  "name": "flat2tree",
+  "version": "1.0.0",
+  "description": "Conversion flat objects to the corresponding tree",
+  "keywords": [
+    "tree",
+    "unflatten",
+    "flat arrays",
+    "nested objects"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bushnode/flat2tree"
+  },
+  "author": "Patric Mathews",
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
