@@ -1,16 +1,10 @@
 'use strict';
 
-/*
-Preferences before other unflatten packages:
-- In case of erroneous input data exception must not be generated;
-- Input data will not be modified.
- */
-
 module.exports = (nodes) => {
     let result = [], idx = {0: {children: result}};
     for (let i = 0; i < nodes.length; i++) {
-        let node = nodes[i], parent = idx[node.parentId];
-        idx[node.id] = parent.children[parent.children.length] = Object.assign({children: []}, node);
+        let node = nodes[i], siblings = idx[node.parentId].children;
+        idx[node.id] = siblings[siblings.length] = Object.assign({children: []}, node);
     }
     return result;
 };
